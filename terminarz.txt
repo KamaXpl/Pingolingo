@@ -1,0 +1,39 @@
+Terminarz:
+
+* Rozpoczęcie pracy: 17 październik 2023
+* Utworzenie bazy danych: 18-19 październik
+* Utworzenie pliku gra.py 19 październik
+* Utworzenie pliku easy.py 28 październik
+* Utworzenie pliku medium.py 28 październik
+* Utworzenie pliku medhard.py 29 październik
+* Utworzenie pliku hard.py 28 październik 
+* Utworzenie pliku README.md 27-30 październik
+* Utworzenie pliku terminarz.txt 28 październik
+
+
+INSERT INTO `easy` (`question`, `A`, `B`, `C`, `D`, `E`, `F`, `Pop_odp`, `photos_folder`) VALUES
+('jablko.jpg', 'raspberry', 'pear', 'strawberry', 'blueberry', 'apple', 'banana', 'apple', '../../../Nauka-Slownictwa/img/jablko.jpg'),
+('banan.jpg', 'apple', 'strawberry', 'raspberry', 'banana', 'tomato', 'carrot', 'banana', '../../../Nauka-Slownictwa/img/banan.jpg'),
+('borowka.jpg', 'blueberry', 'banana', 'pear', 'cabbage', 'onion', 'apple', 'blueberry', '../../../Nauka-Slownictwa/img/borowka.jpg'),
+('pomarancza.jpg', 'pear', 'strawberry', 'rasberry', 'onion', 'apple', 'orange', 'orange', '../../../Nauka-Slownictwa/img/pomarancza.jpg'),
+('gruszka.jpg', 'apple', 'banana', 'strawberry', 'carrot', 'cabbage', 'orange', 'pear', '../../../Nauka-Slownictwa/img/gruszka.jpg'),
+('truskawka.jpg', 'strawberry', 'blueberry', 'rasberry', 'banana', 'apple', 'orange', 'strawberry', '../../../Nauka-Slownictwa/img/truskawka.jpg'),
+('kot.jpg', 'dog', 'snake', 'cat', 'lion', 'tiger', 'bird', 'cat', '../../../Nauka-Slownictwa/img/kot.jpg'),
+('pies.jpg', 'cat', 'cow', 'dog', 'lion', 'snake', 'mouse', 'dog', '../../../Nauka-Slownictwa/img/pies.jpg'),
+('lew.jpg', 'tiger', 'cheetah', 'dog', 'cat', 'lion', 'mouse', 'lion', '../../../Nauka-Slownictwa/img/lew.jpg'),
+('roza.jpg', 'tulip', 'tree', 'rosa', 'orchid', 'blueberry', 'birch', 'rosa', '../../../Nauka-Slownictwa/img/roza.jpg'),
+('drzwi.jpg', 'roof', 'floor', 'house', 'door', 'hall', 'living room', 'door', '../../../Nauka-Slownictwa/img/drzwi.jpg'),
+('linijka.jpg', 'rubber', 'ruler', 'pencil sharper', 'notebook', 'book', 'marker', 'ruler', '../../../Nauka-Slownictwa/img/linijka.jpg'),
+('zeszyt.jpg', 'ruler', 'rubber', 'notebook', 'pen', 'pencil box', 'pencil sharper', 'notebook', '../../../Nauka-Slownictwa/img/zeszyt.jpg'),
+('auto.jpg', 'lorry', 'car', 'bus', 'train', 'airplane', 'ship', 'car', '../../../Nauka-Slownictwa/img/auto.jpg'),
+('swinia.jpg', 'penguin', 'turtle', 'pig', 'goldfish', 'mouse', 'cat', 'pig', '../../../Nauka-Slownictwa/img/swinia.jpg'),
+('szachy.jpg', 'chess', 'game', 'globe', 'scooter', 'roller skates', 'catch', 'chess', '../../../Nauka-Slownictwa/img/szachy.jpg'),
+('krowa.jpg', 'cow', 'sheep', 'chicken', 'turtle', 'cat', 'dog', 'cow', '../../../Nauka-Slownictwa/img/krowa.jpg'),
+('okulary.jpg', 'glasses', 'socks', 'skirt', 'pants', 'boots', 'hat', 'glasses', '../../../Nauka-Slownictwa/img/okulary.jpg'),
+('lampa.jpg', 'lamp', 'bookshelf', 'carpet', 'ceiling', 'chimney', 'door', 'lamp', '../../../Nauka-Slownictwa/img/lampa.jpg'),
+('lozko.jpg', 'lamp', 'desk', 'bed', 'bookshelf', 'bin', 'carpet', 'bed', '../../../Nauka-Slownictwa/img/lozko.jpg'),
+('klawiatura.jpg', 'laptop', 'tablet', 'keyboard', 'microphone', 'speakers', 'charger', 'keyboard', '../../../Nauka-Slownictwa/img/klawiatura.jpg'),
+('zielony.jpg', 'blue', 'yellow', 'green', 'red', 'black', 'purple', 'green', '../../../Nauka-Slownictwa/img/zielony.jpg'),
+('zyrafa.jpg', 'dog', 'turtle', 'horse', 'panda', 'giraffe', 'koala', 'giraffe', '../../../Nauka-Slownictwa/img/zyrafa.jpg'),
+('grzyb.jpg', 'mushroom', 'onions', 'cabbage', 'carrot', 'pumpkin', 'avocado', 'mushroom', '../../../Nauka-Slownictwa/img/grzyb.jpg'),
+('marchewka.jpg', 'carrot', 'potato', 'tomato', 'cucumber', 'onion', 'cabbage', 'carrot', '../../../Nauka-Slownictwa/img/marchewka.jpg');
