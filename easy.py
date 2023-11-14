@@ -165,15 +165,24 @@ def update_answers():
 ## nie dziala wczytywanie i wyswietlanie zdjecia po wylosowaniu
 def update_gui():
     script_dir = os.path.dirname(__file__)
-    rel_path = f"./img/"
+    rel_path = f"\img\\"
+    print("sciezka relatywna: "+rel_path, script_dir)
     abs_file_path = os.path.join(script_dir, rel_path)
+    print("ściezka bezwzgledna: ", "..\\"+rel_path)
     current_file = f"{words[index][0]}"
-    top = Toplevel()
-    imageaaa = Image.open(f"img/{words[index][0]}")
-    a=tk.Label(top,image=imageaaa)
-    a.pack()
+    print("current file: "+"\""+rel_path+current_file)
+    adress = "\".."+rel_path+current_file
+    print(adress)
 
-    question_label.config(text=f"Co to jest: {words[index][0]}?")
+    top = Toplevel()
+    imagea = Image.open(f"img\{words[index][0]}")
+    ph = ImageTk.PhotoImage(imagea)
+    a=Label(top, image=ph)
+    a.image = ph
+    a.pack()
+    
+
+    question_label.config(text=f"Co to jest?")
     
     score_label.config(text=f"Punkty: {points} | Pomyłki: {mistakes}")
 
@@ -198,17 +207,15 @@ def show_result():
     result_img = tk.Label(image=done)
     result_img.pack()
     # wywolanie przycisku by zamknac calkowicie program
-    exit_button = tk.Button(easygame, text="Zakończ", font=("Arial", 18), command=easygame.destroy)
+    exit_button = tk.Button(easygame, text="Zakończ", font=("Arial", 18), bg="white", border=10, command=easygame.destroy)
     exit_button.pack(pady=20)
     # wywolanie przycisku by zagrac w inny level
-    newgame_button= tk.Button(easygame, text="Zagraj w inny poziom trudności", font=("Arial", 18), command=new_game)
+    newgame_button= tk.Button(easygame, text="Zagraj w inny poziom trudności", font=("Arial", 18), bg="white", border=10, command=new_game)
     newgame_button.pack(pady=20)
     bg_img = tk.Label(image=bg).pack()
 
 # wywoływanie label i button do odpowiedzi
 
-image_label = tk.Label(image="")
-image_label.pack() 
 
 question_label = tk.Label(easygame, text="", font=("Impact", 24), bg="white")
 question_label.pack(pady=20)
@@ -226,11 +233,7 @@ answer5_btn.place(x= 450, y= 500)
 answer6_btn = tk.Button(text=f"{words[index][6]}", command=check_answer6, highlightthickness=2, width = 12, height= 4, font=('Arial', 10, 'bold'), border=10)
 answer6_btn.place(x= 650, y= 500)
 
-
-
 # wywoływanie label
-
-
 
 message_label = tk.Label(easygame, text="", font=("Impact", 18), bg="white")
 message_label.pack(pady=20)
@@ -240,7 +243,7 @@ score_label.pack(pady=20)
 
 # wywołanie informacje ~ przycisk
 
-Info = tk.Button(text="Informacje", bg="lightblue", fg="black", command=lambda: info())
+Info = tk.Button(text="Informacje", font=("Impact", 18), bg="lightblue", fg="black", border=5, command=lambda: info())
 Info.pack(side="bottom")
 
 update_gui()

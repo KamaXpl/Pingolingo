@@ -111,10 +111,10 @@ def show_result():
     result_img = tk.Label(image=done)
     result_img.pack()
     # wywolanie przycisku by zamknac calkowicie program
-    exit_button = tk.Button(hardgame, text="Zakończ", font=("Arial", 18), command=hardgame.destroy)
+    exit_button = tk.Button(hardgame, text="Zakończ", font=("Arial", 18), bg="white", border=10, command=hardgame.destroy)
     exit_button.pack(pady=20)
     # wywolanie przycisku by zagrac w inny level
-    newgame_button= tk.Button(hardgame, text="Zagraj w inny poziom trudności", font=("Arial", 18), command=new_game)
+    newgame_button= tk.Button(hardgame, text="Zagraj w inny poziom trudności", font=("Arial", 18), bg="white", border=10, command=new_game)
     newgame_button.pack(pady=20)
     bg_img = tk.Label(image=bg).pack()
 
