@@ -249,7 +249,7 @@ message_label = tk.Label(easygame, text="", font=("Impact", 18), bg="white")
 message_label.pack(pady=20)
 
 score_label = tk.Label(easygame, text="", font=("Impact", 18), bg="white")
-score_label.pack(pady=20)
+score_label.pack()
 
 # wywołanie informacje ~ przycisk
 
