@@ -154,12 +154,12 @@ def check_answer6():
 
 def update_answers():
     global index
-    answer1_btn.config(text=f"1: {words[index][1]}", state="active")
-    answer2_btn.config(text=f"2: {words[index][2]}", state="active")
-    answer3_btn.config(text=f"3: {words[index][3]}", state="active")
-    answer4_btn.config(text=f"4: {words[index][4]}", state="active")
-    answer5_btn.config(text=f"5: {words[index][5]}", state="active")
-    answer6_btn.config(text=f"6: {words[index][6]}", state="active")
+    answer1_btn.config(text=f"{words[index][1]}", state="active")
+    answer2_btn.config(text=f"{words[index][2]}", state="active")
+    answer3_btn.config(text=f"{words[index][3]}", state="active")
+    answer4_btn.config(text=f"{words[index][4]}", state="active")
+    answer5_btn.config(text=f"{words[index][5]}", state="active")
+    answer6_btn.config(text=f"{words[index][6]}", state="active")
 
 ## wyswietlenie zdjecia z folderu img, jednoczesnie nazwa tego pliku ma zostac wylosowana z bazy danych wraz z odpowiedziami
 ## nie dziala wczytywanie i wyswietlanie zdjecia po wylosowaniu
@@ -193,19 +193,23 @@ def new_game():
     from gra import windowstart
 
 # pokazywanie wyniku
-
+# problem jest w wyswietlaniu zdjec welldone i nt
 def show_result():
     for widget in easygame.winfo_children():
         widget.destroy()
     if points >= 15:
         done = tk.PhotoImage(file="welldone.png")
         result_label = tk.Label(easygame, text=f"Gratulacje! Uzyskałeś/aś aż {points} punktów na 20 możliwych. \n Świetnie ci poszło, pingwin Pingo jest z ciebie dumny! Oby tak dalej! \n Well done my friend! Penguin Pingo is really proud of you!", font=("Arial", 24), bg="white", fg="green")
+        result_label.pack(pady=20)
+        result_img = tk.Label(image=done)
+        result_img.pack()
     else:
         done = tk.PhotoImage(file="nt.png")
         result_label = tk.Label(easygame, text=f"Szkoda! Uzyskałeś/aś {points} punktów na 20 możliwych. \n Mamy nadzieję, że nastepnym razem pójdzie ci lepiej! \n A jak nie pingwin Pingo ci pomoże!\n Ahh nice try! \n Penguin Pingo hopes that next time you will do better! ", font=("Arial", 24), bg="white", fg="red")
-    result_label.pack(pady=20)
-    result_img = tk.Label(image=done)
-    result_img.pack()
+        result_label.pack(pady=20)
+        result_img = tk.Label(image=done)
+        result_img.pack()
+   
     # wywolanie przycisku by zamknac calkowicie program
     exit_button = tk.Button(easygame, text="Zakończ", font=("Arial", 18), bg="white", border=10, command=easygame.destroy)
     exit_button.pack(pady=20)
@@ -213,6 +217,7 @@ def show_result():
     newgame_button= tk.Button(easygame, text="Zagraj w inny poziom trudności", font=("Arial", 18), bg="white", border=10, command=new_game)
     newgame_button.pack(pady=20)
     bg_img = tk.Label(image=bg).pack()
+    
 
 # wywoływanie label i button do odpowiedzi
 
