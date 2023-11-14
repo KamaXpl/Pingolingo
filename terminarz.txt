@@ -3,9 +3,9 @@ Terminarz:
 * Rozpoczęcie pracy: 17 październik 2023
 * Utworzenie bazy danych: 18-19 październik
 * Utworzenie pliku gra.py 19 październik
-* Utworzenie pliku easy.py 28 październik
+* Utworzenie pliku easy.py 8 listopad
 * Utworzenie pliku medium.py 28 październik
 * Utworzenie pliku medhard.py 29 październik
 * Utworzenie pliku hard.py 28 październik 
 * Utworzenie pliku README.md 27-30 październik
-* Utworzenie pliku terminarz.txt 28 październik
+* Utworzenie pliku terminarz.txt 14 listopad
