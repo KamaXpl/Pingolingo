@@ -175,6 +175,11 @@ def update_gui():
     print(adress)
 
     top = Toplevel()
+    window_width = 300
+    window_height = 300
+    x1 = (screen_width - window_width) // 12
+    y1 = (screen_height - window_height) // 4
+    top.geometry('{}x{}+{}+{}'.format(window_width, window_height, x1, y1))
     imagea = Image.open(f"img\{words[index][0]}")
     ph = ImageTk.PhotoImage(imagea)
     a=Label(top, image=ph)
@@ -182,7 +187,7 @@ def update_gui():
     a.pack()
     
 
-    question_label.config(text=f"Co to jest?")
+    question_label.config(text=f"Co to jest? \n <---")
     
     score_label.config(text=f"Punkty: {points} | Pomyłki: {mistakes}")
 
