@@ -193,14 +193,14 @@ def check_answer8():
 
 def update_answers():
     global index
-    answer1_btn.config(text=f"1: {words[index][1]}")
-    answer2_btn.config(text=f"2: {words[index][2]}")
-    answer3_btn.config(text=f"3: {words[index][3]}")
-    answer4_btn.config(text=f"4: {words[index][4]}")
-    answer5_btn.config(text=f"5: {words[index][5]}")
-    answer6_btn.config(text=f"6: {words[index][6]}")
-    answer7_btn.config(text=f"7: {words[index][7]}")
-    answer8_btn.config(text=f"8: {words[index][8]}")
+    answer1_btn.config(text=f"{words[index][1]}")
+    answer2_btn.config(text=f"{words[index][2]}")
+    answer3_btn.config(text=f"{words[index][3]}")
+    answer4_btn.config(text=f"{words[index][4]}")
+    answer5_btn.config(text=f"{words[index][5]}")
+    answer6_btn.config(text=f"{words[index][6]}")
+    answer7_btn.config(text=f"{words[index][7]}")
+    answer8_btn.config(text=f"{words[index][8]}")
 
 def update_gui():
     
