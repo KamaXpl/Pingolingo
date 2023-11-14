@@ -193,14 +193,14 @@ def check_answer8():
 
 def update_answers():
     global index
-    answer1_btn.config(text=f"{words[index][1]}")
-    answer2_btn.config(text=f"{words[index][2]}")
-    answer3_btn.config(text=f"{words[index][3]}")
-    answer4_btn.config(text=f"{words[index][4]}")
-    answer5_btn.config(text=f"{words[index][5]}")
-    answer6_btn.config(text=f"{words[index][6]}")
-    answer7_btn.config(text=f"{words[index][7]}")
-    answer8_btn.config(text=f"{words[index][8]}")
+    answer1_btn.config(text=f"1: {words[index][1]}")
+    answer2_btn.config(text=f"2: {words[index][2]}")
+    answer3_btn.config(text=f"3: {words[index][3]}")
+    answer4_btn.config(text=f"4: {words[index][4]}")
+    answer5_btn.config(text=f"5: {words[index][5]}")
+    answer6_btn.config(text=f"6: {words[index][6]}")
+    answer7_btn.config(text=f"7: {words[index][7]}")
+    answer8_btn.config(text=f"8: {words[index][8]}")
 
 def update_gui():
     
@@ -222,12 +222,27 @@ def show_result():
     if points >= 15:
         done = tk.PhotoImage(file="welldone.png")
         result_label = tk.Label(mediumgame, text=f"Gratulacje! Uzyskałeś/aś aż {points} punktów na 20 możliwych. \n Świetnie ci poszło, pingwin Pingo jest z ciebie dumny! Oby tak dalej! \n Well done my friend! Penguin Pingo is really proud of you!", font=("Arial", 24), bg="white", fg="green")
+        result_label.pack(pady=20)
+        result_img = tk.Label(image=done)
+        result_img.pack()
+    elif points > 1 and points < 15:
+        done = tk.PhotoImage(file="nt.png")
+        result_label = tk.Label(mediumgame, text=f"Szkoda! Uzyskałeś/aś {points} punktów na 20 możliwych. \n Mamy nadzieję, że nastepnym razem pójdzie ci lepiej! \n A jak nie pingwin Pingo ci pomoże!\n Ahh nice try! \n Penguin Pingo hopes that next time you will do better! ", font=("Arial", 24), bg="white", fg="red")
+        result_label.pack(pady=20)
+        result_img = tk.Label(image=done)
+        result_img.pack()
     else:
         done = tk.PhotoImage(file="nt.png")
         result_label = tk.Label(mediumgame, text=f"Szkoda! Uzyskałeś/aś {points} punktów na 20 możliwych. \n Mamy nadzieję, że nastepnym razem pójdzie ci lepiej! \n A jak nie pingwin Pingo ci pomoże!\n Ahh nice try! \n Penguin Pingo hopes that next time you will do better! ", font=("Arial", 24), bg="white", fg="red")
-    result_label.pack(pady=20)
-    result_img = Label(image=done)
-    result_img.pack()
+        result_label.pack(pady=20)
+        result_img = tk.Label(image=done)
+        result_img.pack()
+        top3 = Toplevel()
+        img = tk.PhotoImage(file="image.png")
+        img2 = Label(top3, image=img)
+        img2.pack()
+
+   
     # wywolanie przycisku by zamknac calkowicie program
     exit_button = tk.Button(mediumgame, text="Zakończ", font=("Arial", 18), bg="white", border=10, command=mediumgame.destroy)
     exit_button.pack(pady=20)
@@ -235,7 +250,8 @@ def show_result():
     newgame_button= tk.Button(mediumgame, text="Zagraj w inny poziom trudności", font=("Arial", 18), bg="white", border=10, command=new_game)
     newgame_button.pack(pady=20)
     bg_img = tk.Label(image=bg).pack()
-    widget.mainloop()  
+    top3.mainloop()
+    widget.mainloop()
 
 # wywoływanie label i button do odpowiedzi 
 

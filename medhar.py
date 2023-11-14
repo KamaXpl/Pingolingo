@@ -100,12 +100,27 @@ def show_result():
     if points >= 15:
         done = tk.PhotoImage(file="welldone.png")
         result_label = tk.Label(medhargame, text=f"Gratulacje! Uzyskałeś/aś aż {points} punktów na 20 możliwych. \n Świetnie ci poszło, pingwin Pingo jest z ciebie dumny! Oby tak dalej! \n Well done my friend! Penguin Pingo is really proud of you!", font=("Arial", 24), bg="white", fg="green")
+        result_label.pack(pady=20)
+        result_img = tk.Label(image=done)
+        result_img.pack()
+    elif points > 1 and points < 15:
+        done = tk.PhotoImage(file="nt.png")
+        result_label = tk.Label(medhargame, text=f"Szkoda! Uzyskałeś/aś {points} punktów na 20 możliwych. \n Mamy nadzieję, że nastepnym razem pójdzie ci lepiej! \n A jak nie pingwin Pingo ci pomoże!\n Ahh nice try! \n Penguin Pingo hopes that next time you will do better! ", font=("Arial", 24), bg="white", fg="red")
+        result_label.pack(pady=20)
+        result_img = tk.Label(image=done)
+        result_img.pack()
     else:
         done = tk.PhotoImage(file="nt.png")
         result_label = tk.Label(medhargame, text=f"Szkoda! Uzyskałeś/aś {points} punktów na 20 możliwych. \n Mamy nadzieję, że nastepnym razem pójdzie ci lepiej! \n A jak nie pingwin Pingo ci pomoże!\n Ahh nice try! \n Penguin Pingo hopes that next time you will do better! ", font=("Arial", 24), bg="white", fg="red")
-    result_label.pack(pady=20)
-    result_img = Label(image=done)
-    result_img.pack()
+        result_label.pack(pady=20)
+        result_img = tk.Label(image=done)
+        result_img.pack()
+        top3 = Toplevel()
+        img = tk.PhotoImage(file="image.png")
+        img2 = Label(top3, image=img)
+        img2.pack()
+
+   
     # wywolanie przycisku by zamknac calkowicie program
     exit_button = tk.Button(medhargame, text="Zakończ", font=("Arial", 18), bg="white", border=10, command=medhargame.destroy)
     exit_button.pack(pady=20)
@@ -113,7 +128,8 @@ def show_result():
     newgame_button= tk.Button(medhargame, text="Zagraj w inny poziom trudności", font=("Arial", 18), bg="white", border=10, command=new_game)
     newgame_button.pack(pady=20)
     bg_img = tk.Label(image=bg).pack()
-    widget.mainloop()        
+    top3.mainloop()
+    widget.mainloop()
 
 # wywoływanie label, button i entry
 
