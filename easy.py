@@ -222,6 +222,7 @@ def show_result():
     newgame_button= tk.Button(easygame, text="Zagraj w inny poziom trudności", font=("Arial", 18), bg="white", border=10, command=new_game)
     newgame_button.pack(pady=20)
     bg_img = tk.Label(image=bg).pack()
+    widget.mainloop()  
     
 
 # wywoływanie label i button do odpowiedzi
